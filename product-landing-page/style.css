@@ -1,18 +1,30 @@
-header{
+/*
+#cb442a - noa orange
+#382550 - tomil purple
+#ebddcc - body color light
+#1e1628 - navot dark purple
+*/
+body{
+    background-color: #ebddcc;
+}
+#header{
     display:flex;
     justify-content: space-between;
 }
-header h1{
+#header h1{
     align-self: start;
     order:2;
     flex:5;
+    color:#1e1628;
 }
 #header-img{
     width:100px;
     order:1;
+    border-radius:50%;
     
 }
 header nav{
+    color: #1e16280;
     order:3;
     width:45%;
     
@@ -26,8 +38,21 @@ nav ul{
     flex-direction: row;
     justify-content: space-around;
     
+    
+    
+}
+.nav-link{
+    background-color: #dfb27c;
+    padding: 0.7em;
+    border-radius: 5px;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #1e1628;
+    
+    
+}
+a:hover{
+    color: #7e6b96;
+    background-color: #fcf5ee;
 }
