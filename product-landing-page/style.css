@@ -88,12 +88,12 @@ body{
 
 .toggle-span::before{
     bottom: 10px;
-    height: 3.5px;
+    height: 3px;
 }
 
 .toggle-span::after{
     top:10px;
-    height: 3.5px;
+    height: 3px;
     
 }
 
