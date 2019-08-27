@@ -1,58 +1,89 @@
 /*
 #cb442a - noa orange
 #382550 - tomil purple
-#ebddcc - body color light
-#1e1628 - navot dark purple
+rgba(235,221,204,1.0) - body color light
+rgba(30,22,40,1.0) - navot dark purple
 */
+
+
 body{
     background-color: #ebddcc;
+    background-image: url("222-VAG05877.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
+
+/* nav style start */
+:root{
+    --background: rgba(223, 178, 124, 1)
+}
+
 #header{
-    display:flex;
+    text-align:center;
     justify-content: space-between;
+    margin-top:0;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--background);
+    position:fixed;
+    width:100%;
+    position: relative;
 }
+
 #header h1{
     align-self: start;
     order:2;
     flex:5;
     color:#1e1628;
+    position: absolute;
+    font-size: 100%;
+    left:49%;
+    top: 12%;
 }
+
 #header-img{
-    width:100px;
+    width:150px;
     order:1;
     border-radius:50%;
+    margin-top: 4px;
     
 }
 header nav{
-    color: #1e16280;
-    order:3;
-    width:45%;
-    
-}
-header li{
-    list-style: none;
-    
-}
-nav ul{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+    text-align: left;
+    background-color: var(--background);
+    opacity: .95;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
     
     
 }
-.nav-link{
-    background-color: #dfb27c;
-    padding: 0.7em;
-    border-radius: 5px;
+
+.navList{
+    list-style-type: none;
 }
-a{
-    text-decoration: none;
-    color: #1e1628;
+
+
+
+#home {
+    color: #c4c3bb;
+    margin: auto;
+    text-align: center;
+}
+#trailer{
+    margin-top: 100px
     
-    
 }
-a:hover{
-    color: #7e6b96;
-    background-color: #fcf5ee;
+#content {
+    margin: 40px;
+    text-align: center;
 }
+#content p{
+    text-align: start;
+}
+
+
