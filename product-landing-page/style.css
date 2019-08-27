@@ -17,16 +17,15 @@ body{
 
 /* nav style start */
 :root{
-    --background: rgba(223, 178, 124, 1)
+    --background: rgba(223, 178, 124, .94)
 }
 
 #header{
     text-align:center;
     justify-content: space-between;
     margin-top:0;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     background-color: var(--background);
-    position:fixed;
     width:100%;
     position: relative;
 }
@@ -47,26 +46,120 @@ body{
     order:1;
     border-radius:50%;
     margin-top: 4px;
+    z-index: 2000;
     
 }
-header nav{
+
+
+
+
+.nav-toggle{
+    display:none;
+}
+
+.nav-toggle-label{
+    position:absolute;
+    z-index:1000;
+    
+    top: 8px;
+    left:1em;
+    display :flex;
+    height: 155px;
+    align-items: center;
+
+}
+
+.toggle-span,
+.toggle-span::before,
+.toggle-span::after{
+    display:block;
+    background-color: black;
+    height: 3px;
+    width:30px;
+    border-radius: 10px;
+    position: relative;
+} 
+
+.toggle-span::before,
+.toggle-span::after{
+    content:'';
+    position: absolute;
+}
+
+.toggle-span::before{
+    bottom: 10px;
+    height: 3.5px;
+}
+
+.toggle-span::after{
+    top:10px;
+    height: 3.5px;
+    
+}
+
+
+
+
+
+
+.nav-bar{
     text-align: left;
     background-color: var(--background);
-    opacity: .95;
     position: absolute;
-    margin: 0;
+    margin-top: -10px;;
     padding: 0;
     top: 100%;
     width: 100%;
     border-radius: 0px 0px 10px 10px;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition:  400ms ease-in-out;
     
     
 }
 
 .navList{
     list-style-type: none;
+    padding:0;
+    margin:0;
+
 }
 
+.navList li{
+    margin-bottom: .5em;
+    margin-left: .7em;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:black;
+    opacity:0;
+    transition: 150ms ease-in-out;
+}
+
+.nav-link:hover{
+    color: #774e1f
+}
+
+.nav-toggle:checked ~ #header{
+    
+    border-radius: 10px 10px 0px 0px;
+}
+
+.nav-toggle:checked ~ header .nav-bar{
+    transform:scale(1,1);
+    margin-top:0;
+    
+} 
+
+.nav-toggle:checked ~ #content{
+    margin-top: 130px;
+}
+
+.nav-toggle:checked ~ header .nav-link{
+    opacity:1;
+    transition: 250ms ease-in-out 200ms ;
+}
 
 
 #home {
@@ -79,8 +172,9 @@ header nav{
     
 }
 #content {
-    margin: 40px;
+    margin: 20px;
     text-align: center;
+    
 }
 #content p{
     text-align: start;
