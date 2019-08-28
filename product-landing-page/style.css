@@ -12,6 +12,7 @@ rgba(30,22,40,1.0) - navot dark purple
 
 body{
     background-color: #ebddcc;  
+    margin:0;
 }
 
 /* nav style start */
@@ -19,32 +20,21 @@ body{
 
 #header{
     text-align:center;
-    justify-content: space-between;
-    margin-top:0;
-    border-radius: 10px;
+    
     background-color: var(--background);
     width:100%;
     position: relative;
+    margin:0;
+
 }
 
-#header h1{
-    align-self: start;
-    order:2;
-    flex:5;
-    color:#1e1628;
-    position: absolute;
-    font-size: 100%;
-    left:49%;
-    top: 12%;
-}
 
-#header-img{
+.logo{
     width:150px;
-    order:1;
     border-radius:50%;
-    margin-top: 4px;
+    margin: 5px auto;
     z-index: 2000;
-    
+    vertical-align: middle;    
 }
 
 
@@ -56,8 +46,7 @@ body{
 
 .nav-toggle-label{
     position:absolute;
-    z-index:1000;
-    
+    z-index:1000;  
     top: 8px;
     left:1em;
     display :flex;
@@ -71,7 +60,6 @@ body{
     display: inline-block;
     width: 2.1em;
     height: 1.2em;
-    border-radius: 3px;
     border-top: 0.23em solid rgb(0, 0, 0);
     border-bottom: 0.23em solid rgb(0, 0, 0);
 } 
@@ -80,7 +68,6 @@ body{
 .toggle-span::before {
     content: "";
     position: absolute;
-    border-radius: 3px;
     top: 0.5em;
     left: 0px;
     width: 100%;
@@ -96,11 +83,7 @@ body{
     text-align: left;
     background-color: var(--background);
     position: absolute;
-    margin-top: -10px;;
-    padding: 0;
-    top: 100%;
     width: 100%;
-    border-radius: 0px 0px 10px 10px;
     transform: scale(1, 0);
     transform-origin: top;
     transition: 150ms ease-in-out;
@@ -131,10 +114,7 @@ body{
     color: #774e1f;
 }
 
-.nav-toggle:checked ~ #header{
-    
-    border-radius: 10px 10px 0px 0px;
-}
+
 
 .nav-toggle:checked ~ header .nav-bar{
     transform:scale(1,1);
@@ -173,10 +153,65 @@ body{
 }
 
 #content h2{
-    margin: 20px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
+#content{
+    margin:20px;
+}
 
+@media (min-width: 700px){
+    .nav-toggle-label{
+        display:none;
+    }
 
+    #header{
+        display:grid;
+        grid-template-columns: 1fr auto minmax(500px, 1fr) 1fr;
+
+    }
+
+    .logo{
+        margin: 5px auto;
+        grid-column: 2/3 ;
+    }
+
+    .nav-bar{
+        all: unset;
+        grid-column: 3/4;
+        
+    }
+
+    .navList{
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+        
+    }
+
+    .nav-link{
+        opacity: 1;
+        position: relative;
+    }
+
+    .nav-link::before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 3px;
+        background: black;
+        left:0;
+        right:0;
+        bottom : 1.3em;
+        transform: scale(0,1);
+        transition: 250ms ease-in-out;
+        
+    }
+    .nav-link:hover::before{
+        
+        transform: scale(1,1);
+    }
+}
