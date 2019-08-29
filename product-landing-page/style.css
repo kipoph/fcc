@@ -46,11 +46,10 @@ body{
 
 .nav-toggle-label{
     position:absolute;
-    z-index:1000;  
-    top: 8px;
+    z-index:1000;     
     left:1em;
     display :flex;
-    height: 155px;
+    height: 158px;
     align-items: center;
     
 }
@@ -152,14 +151,17 @@ body{
     margin:5%;
 }
 
-#content h2{
+.content h2{
     text-align: center;    
 }
 
-#content{
+.content{
     margin:20px;
 }
 
+.about-us img{
+    width:100%;
+}
 @media (min-width: 700px){
     .nav-toggle-label{
         display:none;
@@ -213,5 +215,28 @@ body{
     .nav-link:hover::before{
         
         transform: scale(1,1);
+    }
+    .about-us{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "header header"
+             "img content"
+             " img content";
+        grid-gap:10px;
+        position: relative;
+    }
+    .about-us h2{
+        grid-area: header;
+    }
+    .about-us img{
+        grid-area: img;
+        align-self: center;
+        
+        position: absolute;
+        
+    }
+
+    .about-us p{grid-area: content}
     }
 }
