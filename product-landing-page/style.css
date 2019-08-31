@@ -15,12 +15,14 @@ body{
     margin:0;
 }
 
+h2{
+    text-align:center;
+}
 /* nav style start */
 
 
 #header{
     text-align:center;
-    
     background-color: var(--background);
     width:100%;
     position: relative;
@@ -121,8 +123,9 @@ body{
     
 } 
 
-.nav-toggle:checked ~ #content{
+.nav-toggle:checked ~ .the-show{
     margin-top: 130px;
+    transition: 200ms ease-in-out  ;
 }
 
 .nav-toggle:checked ~ header .nav-link{
@@ -131,11 +134,7 @@ body{
 }
 
 
-#home {
-    color: #c4c3bb;
-    margin: auto;
-    text-align: center;
-}
+
 
 .trailer{
     width:100%;
@@ -148,19 +147,26 @@ body{
     width:90%;
     height: 90%;
     position: absolute;
-    margin:5%;
+    margin-left:5%;
+    margin-right: 5%;
 }
 
-.content h2{
-    text-align: center;    
-}
 
 .content{
     margin:20px;
 }
 
+.about-us{
+    margin-top:30px;
+}
+
 .about-us img{
     width:100%;
+}
+
+.contact{
+    padding-bottom:60px;
+    background-color: var(--background);
 }
 @media (min-width: 700px){
     .nav-toggle-label{
@@ -224,19 +230,20 @@ body{
              "img content"
              " img content";
         grid-gap:10px;
-        position: relative;
+        
     }
+
     .about-us h2{
         grid-area: header;
     }
-    .about-us img{
+    .about-img {
         grid-area: img;
         align-self: center;
         
-        position: absolute;
         
     }
 
     .about-us p{grid-area: content}
-    }
 }
+
+
