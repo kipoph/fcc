@@ -140,7 +140,7 @@ h2{
 } 
 
 .nav-toggle:checked ~ .the-show{
-    margin-top: 130px;
+    margin-top: 280px;
     transition: 200ms ease-in-out  ;
 }
 
