@@ -4,6 +4,8 @@
 rgba(235,221,204,1.0) - body color light
 rgba(30,22,40,1.0) - navot dark purple
 */
+
+/* general */ 
 :root{
     --background: rgba(223, 178, 124, .94)
 }
@@ -18,15 +20,28 @@ body{
 h2{
     text-align:center;
 }
+
+
+
+
+
+
 /* nav style start */
+
+
+
+
+
+
 
 
 #header{
     text-align:center;
     background-color: var(--background);
     width:100%;
-    position: relative;
+    top:0;
     margin:0;
+    position:fixed;
 
 }
 
@@ -47,8 +62,9 @@ h2{
 }
 
 .nav-toggle-label{
-    position:absolute;
-    z-index:1000;     
+    position: fixed;
+    z-index:1000; 
+    top:0;    
     left:1em;
     display :flex;
     height: 158px;
@@ -136,28 +152,50 @@ h2{
 
 
 
+
+
+
+/* Content */
+
+
+
+
+
+
+
+
+.content{
+    margin: auto 20px;
+}
+
+.the-show {   
+    margin-top:175px;
+}
+
 .trailer{
     width:100%;
     height:0;
-    padding-bottom: 52.25%;
+    padding-bottom: 56.25%;
     position: relative;
+    background: ;
 }
 
 .trailer iframe{
     width:90%;
     height: 90%;
     position: absolute;
+    
+
     margin-left:5%;
     margin-right: 5%;
+    margin-bottom:50px;
+    z-index: 1;
 }
 
 
-.content{
-    margin:20px;
-}
 
 .about-us{
-    margin-top:30px;
+    margin-top: 50px;
 }
 
 .about-us img{
@@ -168,6 +206,23 @@ h2{
     padding-bottom:60px;
     background-color: var(--background);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* big screen */
+
+
+
+
+
 @media (min-width: 700px){
     .nav-toggle-label{
         display:none;
@@ -229,13 +284,16 @@ h2{
             "header header"
              "img content"
              " img content";
-        grid-gap:10px;
-        
+        grid-row-gap:0px;
+        grid-column-gap: 10px;
+        margin-top: -10px;
     }
 
-    .about-us h2{
+    .about-us h2 {
         grid-area: header;
+        margin-top: -10px;
     }
+
     .about-img {
         grid-area: img;
         align-self: center;
@@ -247,3 +305,38 @@ h2{
 }
 
 
+
+
+
+
+
+/*about us media stuf*/
+@media (min-width: 500px){
+    .about-us{
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 850px){
+    .about-us h2 {
+       margin-top:-30px;
+    }
+}
+
+@media (min-width: 1000px){
+    .about-us h2 {
+       margin-top:-40px;
+    }
+}
+
+@media (min-width: 1300px){
+    .about-us h2 {
+       margin-top:-50px;
+    }
+}
+
+@media (min-width: 1700px){
+    .about-us h2 {
+       margin-top:-65px;
+    }
+}
