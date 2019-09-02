@@ -42,6 +42,7 @@ h2{
     top:0;
     margin:0;
     position:fixed;
+    z-index: 1000;
 
 }
 
@@ -177,7 +178,7 @@ h2{
     height:0;
     padding-bottom: 56.25%;
     position: relative;
-
+    z-index: 0;
 }
 
 .trailer iframe{
