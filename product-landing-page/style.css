@@ -140,7 +140,7 @@ h2{
     
 } 
 
-.nav-toggle:checked ~ .the-show{
+.nav-toggle:checked ~ main .the-show{
     margin-top: 280px;
     transition: 200ms ease-in-out  ;
 }
@@ -232,6 +232,12 @@ h2{
     transform: scale(1,1);
 }
 
+#main{
+    max-width: 990px;
+
+
+}
+
 
 
 
@@ -255,6 +261,10 @@ h2{
         display:grid;
         grid-template-columns: 1fr auto minmax(500px, 1fr) 1fr;
 
+    }
+
+    #main{
+        margin: 0 10%;
     }
 
     .logo{
@@ -334,7 +344,7 @@ h2{
 
 
 /*about us media stuf*/
-@media (min-width: 500px){
+/*@media (min-width: 500px){
     .about-us{
         margin-top: 40px;
     }
